@@ -3,23 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Store</title>
     <style>
         body {
             margin: 0;
-            background-color: black;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #3a2e15);
+            color: #333;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #000000;
+            padding: 10px 20px;
+        }
+        .header img {
+            width: 100px;
+            height: auto;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #7a622e;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            color: #a88946;
+        }
+        .search-bar {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: calc(100vh - 50px);
+        .search-container {
+            position: relative;
+            width: 50%;
         }
-        img {
-            max-width: 30%;
-            height: auto;
+        .search-container input {
+            width: 100%;
+            padding: 10px 40px 10px 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+        .search-container .icon {
+            position: absolute;
+            top: 50%;
+            right: -3%; /* Adjust distance from the right edge */
+            transform: translateY(-50%);
+            width: 24px; /* Adjust icon size */
+            height: 24px;
         }
     </style>
 </head>
 <body>
-    <img src="icons/pvx-logo.png" alt="PVX Logo">
+    <header class="header">
+        <img src="icons/pvx-logo.png" alt="Store Logo">
+        <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#">Produtos</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Suporte</a>
+        </nav>
+    </header>
+    <div class="search-bar">
+        <div class="search-container">
+            <input type="text" placeholder="A vida com mais nitidez...">
+            <img src="icons/search.svg" alt="Search Icon" class="icon">
+        </div>
+    </div>
 </body>
 </html>
